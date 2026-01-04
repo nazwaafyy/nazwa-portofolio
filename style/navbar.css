@@ -1,0 +1,118 @@
+:root {
+  --navy: #0b1f3a;
+  --navy-soft: #12335c;
+  --white: #ffffff;
+}
+
+/* NAVBAR */
+.custom-navbar {
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+  padding: 14px 0;
+}
+
+/* BRAND */
+.navbar-brand {
+  font-weight: 800;
+  color: var(--navy) !important;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 35px;
+  height: 35px;
+  background: var(--navy);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+/* LINK MENU */
+.nav-link {
+  color: var(--navy) !important;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--navy-soft) !important;
+}
+
+/* underline hover */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: var(--navy);
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* BUTTON */
+.btn-custom {
+  background: var(--navy);
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background: var(--navy-soft);
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* HERO CONTOH */
+.hero {
+  padding: 80px 20px;
+}
+
+.navbar-scroll {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform 0.35s ease;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+/* navbar hilang */
+.navbar-hide {
+  transform: translateY(-100%);
+}
+
+.navbar .nav-link {
+  position: relative;
+  font-weight: 700;
+  color: #0b1f3a !important;
+}
+
+.navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background: #0b1f3a;
+  border-radius: 10px;
+}
+

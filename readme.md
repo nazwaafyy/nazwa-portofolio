@@ -9,6 +9,6 @@ HTML, CSS, JavaScript, Bootstrap 5
 🔗 https://nazwaafyy.github.io/nazwa-portofolio
 
 ## Contact
-Email: nazwachandra99@gmail.com  
-Github: https://github.com/nazwaafyy  
-Instagram: https://instagram.com/nazwaafyy
+email: nazwachandra99@gmail.com  
+github: https://github.com/nazwaafyy  
+instagram: https://instagram.com/nazwaafyy

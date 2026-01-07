@@ -108,3 +108,31 @@
     text-align: center;
   }
 }
+
+.project-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project-desc.expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+  overflow: visible;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--navy);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  margin-top: -5px;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}

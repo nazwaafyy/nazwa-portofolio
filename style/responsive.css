@@ -2,116 +2,87 @@
    NAVBAR MOBILE - MODERN STYLE
    =========================== */
 @media (max-width: 768px) {
-
-  /* Navbar tetap clean */
   nav.custom-navbar {
-    padding: 10px 0 !important;
-    background: rgba(255,255,255,0.95) !important;
-    backdrop-filter: blur(10px);
+    position: relative; /* supaya collapse absolute ngikut navbar */
+    z-index: 9999;
   }
+}
 
-  /* Brand */
-  nav.custom-navbar .navbar-brand {
-    font-size: 18px !important;
-    gap: 8px !important;
-    letter-spacing: 0.5px !important;
-    white-space: nowrap !important;
-  }
+@media (max-width: 768px) {
 
-  nav.custom-navbar .brand-logo {
-    width: 32px !important;
-    height: 32px !important;
-    font-size: 16px !important;
-    border-radius: 10px !important;
-  }
+  nav.custom-navbar .navbar-collapse {
+    position: absolute !important;
+    top: 60px; /* jarak dari navbar (sesuaikan tinggi navbar kamu) */
+    right: 16px; /* tampil di kanan */
+    
+    width: 260px !important;
+    max-width: calc(100vw - 32px) !important;
 
-  /* ✅ Hamburger lebih modern */
-  nav.custom-navbar .navbar-toggler {
-    width: 44px !important;
-    height: 44px !important;
-    border-radius: 14px !important;
-    border: 1px solid rgba(0,0,0,0.12) !important;
-    background: rgba(11,31,58,0.05) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    transition: 0.3s ease !important;
-  }
-
-  nav.custom-navbar .navbar-toggler:hover {
-    background: rgba(11,31,58,0.10) !important;
-  }
-
-  nav.custom-navbar .navbar-toggler:focus {
-    box-shadow: none !important;
-  }
-
-  /* icon */
-  nav.custom-navbar .navbar-toggler-icon {
-    width: 22px !important;
-    height: 22px !important;
-    filter: brightness(0) saturate(100%);
-  }
-
-  /* ✅ Dropdown jadi premium card */
-    nav.custom-navbar .navbar-collapse {
-    margin-top: 12px !important;
-    border-radius: 18px !important;
-
-    /* ✅ batas ukuran */
-    max-width: 320px !important;   
-    width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-
+    border-radius: 16px !important;
     padding: 14px 14px 16px !important;
-    background: rgba(255,255,255,0.96) !important;
+
+    background: rgba(255,255,255,0.97) !important;
     backdrop-filter: blur(14px);
     border: 1px solid rgba(0,0,0,0.07) !important;
     box-shadow: 0 16px 40px rgba(0,0,0,0.10) !important;
+
+    /* Animasi turun */
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
   }
 
-  /* menu */
+  /* Saat menu terbuka (Bootstrap kasih class .show) */
+  nav.custom-navbar .navbar-collapse.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
   nav.custom-navbar .navbar-nav {
-    gap: 10px !important;
+    gap: 6px !important;
   }
 
   nav.custom-navbar .nav-item {
     border-bottom: 1px solid rgba(0,0,0,0.06);
-    padding: 5px 0;
+    padding: 4px 0 !important;
   }
 
-  nav.custom-navbar .nav-item:last-child {
-    border-bottom: none;
-  }
-
-    /* nav link lebih compact */
   nav.custom-navbar .nav-link {
     padding: 10px 10px !important;
     font-size: 14px !important;
     border-radius: 12px !important;
   }
 
-  nav.custom-navbar .nav-link:hover {
-    background: rgba(11,31,58,0.08) !important;
-  }
-
-  /* hilangkan underline hover */
-  nav.custom-navbar .nav-link::after,
-  nav.custom-navbar .nav-link.active::after {
-    display: none !important;
-  }
-
-  /* ✅ Button CV lebih elegan */
   nav.custom-navbar .btn-custom {
     width: 100% !important;
-    padding: 12px 0 !important;
-    font-size: 15px !important;
-    border-radius: 14px !important;
-    margin-top: 12px !important;
+    padding: 10px 0 !important;
+    margin-top: 10px !important;
+    border-radius: 12px !important;
+    font-size: 14px !important;
   }
 }
+
+nav.custom-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: 0.3s ease;
+}
+
+nav.custom-navbar.hide-navbar {
+  transform: translateY(-100%);
+}
+
+body {
+  padding-top: 30px; /* sesuaikan tinggi navbar kamu */
+}
+
 
 
 /* ==================== HERO ====================== */
